@@ -12,9 +12,9 @@ sudo systemctl enable docker
 sudo systemctl start/status docker    for docker run in ec2 
 
 
-
-docker ps 
-docker exec -it bc02e694fddf /bin/sh
+for edit config and open other component
+1-docker ps 
+2-docker exec -it bc02e694fddf /bin/sh
 
 to see all the folder 
 cd /usr/share/nginx/html
@@ -24,14 +24,15 @@ exit
 to edit the config file 
 docker ps
 docker exec -it bc02e694fddf /bin/sh
-vi /etc/nginx/nginx.conf  ? nano /etc/nginx/nginx.conf  error in docker case 
+3-vi /etc/nginx/nginx.conf  ? nano /etc/nginx/nginx.conf  error in docker case 
 
 
-ls /etc/nginx/conf.d/
+4-ls /etc/nginx/conf.d/
 it will give default.conf
-nano /etc/nginx/conf.d/default.conf
+may 4-nano /etc/nginx/conf.d/default.conf
 
-vi /etc/nginx/conf.d/default.conf
+may 4-vi /etc/nginx/conf.d/default.conf
+
 and for edit use vi
 add this in editor file
 try_files $uri $uri/ /index.html;
